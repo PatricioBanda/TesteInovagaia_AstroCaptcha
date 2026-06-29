@@ -1,0 +1,6 @@
+{
+  "name": "AstroCAPTCHA",
+  "description": "A cosmic security protocol requiring users to connect stars and identify constellations to prove their human identity, backed by Gemini-generated stellar insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
