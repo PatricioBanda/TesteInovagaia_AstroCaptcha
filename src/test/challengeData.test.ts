@@ -53,9 +53,10 @@ describe('toPublicChallenge', () => {
   it('strips solutionEdges and successFeedback fields', () => {
     const priv = PRIVATE_CHALLENGES[0];
     const pub = toPublicChallenge(priv);
-    expect((pub as Record<string, unknown>).solutionEdges).toBeUndefined();
-    expect((pub as Record<string, unknown>).successFeedbackPt).toBeUndefined();
-    expect((pub as Record<string, unknown>).successFeedbackEn).toBeUndefined();
+    const pubAny = pub as unknown as Record<string, unknown>;
+    expect(pubAny.solutionEdges).toBeUndefined();
+    expect(pubAny.successFeedbackPt).toBeUndefined();
+    expect(pubAny.successFeedbackEn).toBeUndefined();
   });
 
   it('exposes previewEdges equal to the original solutionEdges', () => {
